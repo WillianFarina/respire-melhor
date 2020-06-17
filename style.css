@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: url('https://images.unsplash.com/photo-1444033260440-c91ea1bfb5ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;  
+  object-fit: contain;
+  color: #FFF;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+button {
+  background-color: #3c336d;
+  color: #FFF;
+  font-size: 16px;
+  text-decoration: none;
+  width: 104px;
+  height: 48px;
+  padding: 8px 16px;
+  border-radius: 15px;
+  outline: none;
+  text-align: center;
+  margin: 40px 0;
+  cursor: pointer;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  margin-top: 200px;
+}
+
+.text-content {
+  color: #f0f0f2;
+  margin-left: 20px;
+}
+
+.text-content p {
+  font-size: 20px;
+}
+
+.text-content p + p {
+  margin-bottom: 20px;
+}
+
+.text-content ul {
+  list-style: none;
+  margin-bottom: 20px;
+  font-size: 24px;
+  line-height: 34px;
+}
+
+.text-content h4 {
+  font-size: 20px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 340px;
+  width: 340px;
+  margin: auto;
+  position: relative;
+  transform: scale(1);
+}
+
+.gradient-circle {
+  background: conic-gradient(
+    #3a318a 0%,
+    #5f4ca4 40%,
+    #FFF 40%,
+    #FFF 60%,
+    #3c336d 60%,
+    #392a5b 100%
+  );
+  height: 360px;
+  width: 360px;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  z-index: -2;
+  border-radius: 50%;
+}
+
+.circle {
+  background-color: #010f1c;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.pointer-container {
+  position: absolute;
+  top: -40px;
+  left: 160px;
+  width: 30px;
+  height: 210px;
+}
+
+.pointer-container.active {
+  position: absolute;
+  top: -40px;
+  left: 160px;
+  width: 30px;
+  height: 210px;
+  animation: rotate 7.5s linear forwards infinite;
+  transform-origin: bottom center;
+}
+
+.pointer {
+  background-color: #FFF;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.container.grow {
+  animation: grow 3s linear forwards;
+}
+
+.container.shrink {
+  animation: shrink 3s linear forwards;
+}
+
+@keyframes rotate {
+  from{
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes grow {
+  from{
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes shrink {
+  from{
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+
