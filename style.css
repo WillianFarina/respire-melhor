@@ -105,15 +105,15 @@ button {
   border-radius: 50%;
 }
 
-.pointer-container {
+/* .pointer-container {
   position: absolute;
   top: -40px;
   left: 160px;
   width: 30px;
   height: 210px;
-}
+} */
 
-.pointer-container.active {
+.pointer-container/*.active*/ {
   position: absolute;
   top: -40px;
   left: 160px;
